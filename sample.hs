@@ -17,34 +17,34 @@ areAscending::Integer->Integer->Integer->Bool
 areAscending a b c = a < b && b < c
 -- (mod a b) is equal to (a `mod` b)   {infix}
 -- Also, (a + b) is equal to ((+) a b) {prefix}
+-- Guard mode, each expression is valued, till true the assignment succeeds.
 fizzBuzzHelper::Integer->String
 fizzBuzzHelper n
-    |n `mod` 3 == 0&&n `mod` 5 ==0 = "fizzBuzz"
+    |n `mod` 3 == 0 && n `mod` 5 == 0 = "fizzBuzz"
     |n `mod` 3 == 0 = "fizz"
     |n `mod` 5 == 0 = "buzz"
-    |otherwise=""
+    |otherwise = ""
+-- Variable(function with return value) declared with type.
 someValue::String
 someValue="helloworld"
-x=2
-y=3
-func=let z=x+y
-    in print z
--- now x cannot be assigned to other values
-safeDiv x y=
-    let q=div x y
-    in if y == 0 then 0 else q
-loop=let x= x+1
-    in print x
--- you should be full aware what is functional programming language by the
--- +following example.
--- +And what's more, Int differs from Integer.
---factorial::Int->Int
-factorial n=if n > 1 then n * factorial(n-1) else 1
-haskellSpirit=factorial
--- Type is decleared through this format.
+-- Type can also be specified with this format.
 typeDecl::Float
 typeDecl=(1::Float)+1.0
--- Function with Set declaration, also set can be empty ()
+x=2
+y=3
+-- The 'let' set the variable declared to be local
+func = let z = x + y
+    in print z
+-- Now x cannot be assigned to other values
+safeDiv x y =
+    let q = div x y
+    in if y == 0 then 0 else q
+loop = let x = x + 1
+    in print x
+-- And what's more, Int differs from Integer.
+-- factorial::Int->Int
+factorial n = if n > 1 then n * factorial (n - 1) else 1
+-- Function with 'Set' as variable declaration, note set can be empty ()
 setFunc::(Int,Int,Int)->Int
 setFunc (a,b,c)=a+b+c
 -- lambda functions
