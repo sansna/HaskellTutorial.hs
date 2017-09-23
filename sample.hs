@@ -45,6 +45,9 @@ loop = let x = x + 1
 -- factorial::Int->Int
 factorial n = if n > 1 then n * factorial (n - 1) else 1
 -- Function with 'Set' as variable declaration, note set can be empty ()
+-- +But keep in mind that everything in haskell is curried, so the set
+-- +implementation itself shall be something like currying.
+-- +According to (wiki.haskell.org/Curring)
 setFunc::(Int,Int,Int)->Int
 setFunc (a,b,c)=a+b+c
 -- lambda functions
