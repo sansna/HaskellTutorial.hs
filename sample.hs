@@ -1,9 +1,9 @@
 #!/bin/ghci
 -- To compile this into a runnable script, use ghc --make sample.hs
 -- This module is needed by function isLower etc.
-{-	-
-	-	Comment Block
-	-}
+{-  -
+    -   Comment Block
+    -}
 import GHC.Unicode
 
 main = putStrLn "Hello World!"
@@ -57,9 +57,9 @@ setFunc (a,b,c)=a+b+c
 countLowercaseAndDigits :: String->Int
 countLowercaseAndDigits = length . filter (\c -> isLower c|| isDigit c)
 safeTail x |null x = []
-	|otherwise = tail x
+    |otherwise = tail x
 classify age = case age of
-	0 -> "newborn"
-	1 -> "infant"
-	2 -> "toddler"
-	_ -> "senior citizen" -- seems '_' equals is no special in this case
+    0 -> "newborn"
+    1 -> "infant"
+    2 -> "toddler"
+    _ -> "senior citizen" -- seems '_' equals is no special in this case

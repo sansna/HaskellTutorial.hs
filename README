@@ -3,12 +3,20 @@ Haskell Introduction
 
 This Repo is created to store exercises while I am learning haskell.
 
+For a quick reference to all keywords used in Haskell, goto
+https://wiki.haskell.org/Keywords.
+
+Before trying any of the scripts online, notice that all haskell scripts
+should be aligned with *SPACES*, no tabs allowed, otherwise it may cause
+undetermined problems.
+
 Most of them can be found transformed from other scripts. But I know
 these scripts will not cause legal problems.
 
 Some concepts learned from haskell:
 1.currying
 2.IO value of multi-type
+3.concept of field/ring
 
 After learning Haskell for sometime, I found this language is not suitable
 for developing *commercial* programs.
@@ -20,12 +28,18 @@ time learning and practicing.
 2.Many libs in hackage are not consistent with older versions in the
 interface level.
 
-3.Copied several examples from web/youtube into my local environment, trying
-to get better understanding of its ideas, but even these tutorials are not
-working as they suggested.
+3.[Reason clarified] Copied several examples from web/youtube into my local
+environment, trying to get better understanding of its ideas, but even these 
+tutorials are not working as they suggested.
 
 4.It is slow, and its functionalities can be achieved through C code.
+
+5. Its package management tool *cabal* is somehow broken. Stack is another tool
+but I have not give it a shot. Maybe try later.
 
 But I always suggest using haskell as a tool to get familiar with the
 concept of functional programming. Though might not be accepted in nowadays
 architectures, it might be adopted by future architectures.
+
+Also, I think the lack of maintainer should kill haskell at last. This language
+is *dead* to some extent.
